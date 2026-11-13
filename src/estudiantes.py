@@ -25,3 +25,8 @@ def registrar_estudiante(estudiantes, codigo, nombre, programa):
     }
     estudiantes.append(estudiante)
     return estudiante
+
+
+def listar_estudiantes(estudiantes):
+    """Devuelve una copia ordenada de los estudiantes por código."""
+    return sorted((dict(e) for e in estudiantes), key=lambda e: e["codigo"])
