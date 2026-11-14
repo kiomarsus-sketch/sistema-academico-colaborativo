@@ -23,6 +23,11 @@ Implementar un flujo colaborativo con Git y GitHub: repositorio, ramas, commits,
 - Cuenta de GitHub.
 - Editor recomendado: Visual Studio Code.
 
+## Instalación
+1. Clona el repositorio: `git clone https://github.com/kiomarsus-sketch/sistema-academico-colaborativo.git`
+2. Entra a la carpeta: `cd sistema-academico-colaborativo`
+3. Verifica Python: `python --version` (debe ser 3.10 o superior).
+
 ## Ejecución local
 Desde la carpeta raíz del proyecto:
 
@@ -99,3 +104,7 @@ Nunca publiques contraseñas, tokens, claves privadas ni archivos `.env` con sec
 
 ## Limitaciones
 El proyecto no persiste datos, no autentica usuarios y no debe usarse como sistema académico de producción.
+
+## Integrantes
+- kiomar nano cainicela (kiomarsus-sketch)
+- NANO030524 (revisión de Pull Requests)
