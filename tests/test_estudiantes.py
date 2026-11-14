@@ -1,5 +1,5 @@
 import unittest
-from src.estudiantes import registrar_estudiante
+from src.estudiantes import registrar_estudiante, listar_estudiantes
 
 
 class TestEstudiantes(unittest.TestCase):
@@ -29,6 +29,12 @@ class TestEstudiantes(unittest.TestCase):
         registrar_estudiante(self.estudiantes, "A001", "Ana Torres", "Computación")
         with self.assertRaisesRegex(ValueError, "Ya existe"):
             registrar_estudiante(self.estudiantes, "A001", "Luis Rojas", "Administración")
+
+    def test_lista_ordenada_por_codigo(self):
+        registrar_estudiante(self.estudiantes, "A002", "Luis Rojas", "Administración")
+        registrar_estudiante(self.estudiantes, "A001", "Ana Torres", "Computación")
+        resultado = listar_estudiantes(self.estudiantes)
+        self.assertEqual([e["codigo"] for e in resultado], ["A001", "A002"])
 
 
 if __name__ == "__main__":
